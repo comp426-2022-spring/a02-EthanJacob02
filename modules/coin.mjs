@@ -92,7 +92,7 @@ function countFlips(array) {
  */
 
 function flipACoin(call) {
-  flipResult = coinFlip();
+  const flipResult = coinFlip();
   if (flipResult == call) {
     return {call: call, flip: flipResult, result: 'win'};
   }
