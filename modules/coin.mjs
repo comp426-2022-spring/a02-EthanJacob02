@@ -41,11 +41,11 @@ function coinFlip() {
  */
 
 function coinFlips(flips) {
-  flipSet = new Array(flips);
-  x = 0;
+  let flipSet = new Array(flips);
+  let x = 0;
   while (x < flips) {
     flipSet[x] = coinFlip();
-    x++;
+    x = x + 1;
   }
   return flipSet;
 }
@@ -64,15 +64,20 @@ function coinFlips(flips) {
  */
 
 function countFlips(array) {
-  headCount = 0;
-  tailsCount = 0;
-  for (flip in array) {
-    if (flip == 'heads') {
+  let headCount = 0;
+  let tailsCount = 0;
+  for (let x = 0; x < array.length; x++) {
+    if (array[x] == 'heads') {
       headCount++;
     }
     else {tailsCount++;}
   }
-  return {heads: headCount, tails: tailsCount};
+  if (headCount == 0) {return {tails: tailsCount}}
+  if (tailsCount == 0) {return {heads: headCount}}
+  else {
+    return {heads: headCount, tails: tailsCount};
+  }
+  
 }
 
 /** Flip a coin!

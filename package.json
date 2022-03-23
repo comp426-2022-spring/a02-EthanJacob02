@@ -19,5 +19,8 @@
     "url": "https://github.com/comp426-2022-spring/a02-EthanJacob02/issues"
   },
   "homepage": "https://github.com/comp426-2022-spring/a02-EthanJacob02#readme",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "minimist": "^1.2.6"
+  }
 }
